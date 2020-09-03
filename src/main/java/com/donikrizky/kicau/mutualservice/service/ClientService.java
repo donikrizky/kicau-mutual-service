@@ -4,8 +4,8 @@ import java.util.List;
 
 public interface ClientService {
 
-	List<Integer> findMutualByUserId(Integer userId);
+	public List<Integer> findMutualByUserId(Integer userId);
 
-	Long findFavoriteCount(Integer itemId);
+	public Long findFavoriteCount(Integer itemId);
 
 }

@@ -1,8 +1,5 @@
 package com.donikrizky.kicau.mutualservice.service.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +15,6 @@ public class MutualServiceImpl implements MutualService {
 	@Autowired
 	MutualServiceImpl(MutualRepository mutualRepository) {
 		this.mutualRepository = mutualRepository;
-//		this.addDummyMutual();
 	}
 
 	@Override
@@ -28,12 +24,4 @@ public class MutualServiceImpl implements MutualService {
 		mutualRepository.save(mutual);
 	}
 
-	private void addDummyMutual() {
-		List<Mutual> mutuals = new ArrayList<Mutual>();
-		mutuals.add(Mutual.builder().userId(2).followerId(1).build());
-		mutuals.add(Mutual.builder().userId(3).followerId(1).build());
-		
-		mutualRepository.saveAll(mutuals);
-
-	}
 }
